@@ -47,5 +47,18 @@ public class loginpage extends Testbase {
 		
 	}
 	
+	public void validlogin2() throws InterruptedException {
+		username.sendKeys("CORP1.U4");
+		Thread.sleep(2000);
+		continuebutton.click();
+		Thread.sleep(2000);
+		accesscode.sendKeys("TEST123");
+		Thread.sleep(2000);
+		keyboard.click();
+		Thread.sleep(2000);
+		submitlogin.click();
+		
+	}
+	
 	
 }

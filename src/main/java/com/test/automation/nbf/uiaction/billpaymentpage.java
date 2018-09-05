@@ -47,12 +47,6 @@ public class billpaymentpage extends Testbase {
 		
 		pay.click();
 		Thread.sleep(10000);
-		
 	
-		
-		
-		
-		
-		
 	}
 }

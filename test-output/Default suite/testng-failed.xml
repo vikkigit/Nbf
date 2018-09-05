@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.test.automation.nbf.login.TC001_valid_login">
+      <class name="com.test.automation.nbf.login.TC002_approvebillpayments">
         <methods>
-          <include name="verifylogin"/>
-          <include name="start"/>
           <include name="endtest"/>
+          <include name="approvebill"/>
+          <include name="start"/>
         </methods>
-      </class> <!-- com.test.automation.nbf.login.TC001_valid_login -->
+      </class> <!-- com.test.automation.nbf.login.TC002_approvebillpayments -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

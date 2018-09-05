@@ -10,6 +10,7 @@ import com.test.automation.nbf.uiaction.billpaymentpage;
 import com.test.automation.nbf.uiaction.dashboard;
 import com.test.automation.nbf.uiaction.loginpage;
 import com.test.automation.nbf.uiaction.paymentdetailspage;
+import com.test.automation.nbf.uiaction.paymentsummarypage;
 
 public class TC001_valid_login extends Testbase {
 	
@@ -17,6 +18,7 @@ public class TC001_valid_login extends Testbase {
 	dashboard dashboard;
 	billpaymentpage billapayment;
 	paymentdetailspage payment;
+	paymentsummarypage paymentsummary;
 	
 	@BeforeClass
 	public void start() throws IOException, InterruptedException {
@@ -29,6 +31,7 @@ public class TC001_valid_login extends Testbase {
 		dashboard=new dashboard(driver);
 		billapayment=new billpaymentpage(driver);
 		payment=new paymentdetailspage(driver);
+		paymentsummary=new paymentsummarypage(driver);
 		
 		login.validlogin();
 		Thread.sleep(4000);
@@ -48,12 +51,12 @@ public class TC001_valid_login extends Testbase {
 		payment.verify_paymentdetailspage();
 		Thread.sleep(4000);
 		
-		
-		
-		
 		payment.select_accounts();
 		Thread.sleep(3000);
-
+		
+		paymentsummary.submitpayment();
+		
+		Thread.sleep(3000);
 		dashboard.logout();
 		
 	}
